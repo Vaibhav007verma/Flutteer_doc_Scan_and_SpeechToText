@@ -1,16 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../Thor/emp_model.dart';
 
-// Model
 
-class Emp{
-  String? name;
-  int? id;
-  bool done;
-
-  Emp({this.name, this.id, this.done = false});
-}
 
 
 
@@ -58,7 +51,7 @@ class EmpScr extends StatelessWidget{
           IconButton(
             icon: Icon(Icons.add_box_outlined),
             onPressed: (){
-              _emp.add(_name.text, _emp._emp.length+1, _name.text.length < 3 ? true : false); _name.clear();
+              _emp.add(_name.text, _emp.emp.length+1, _name.text.length < 3 ? true : false); _name.clear();
             },
           ),
 
@@ -66,7 +59,7 @@ class EmpScr extends StatelessWidget{
               height: 250, color: Colors.limeAccent,
               child: Expanded(
                 child: Obx(() => ListView.builder(
-                  itemCount: _emp._emp.length,
+                  itemCount: _emp.emp.length,
                   itemBuilder: (context, index) {
                     return ListTile(
                       leading: Checkbox(value: _emp._emp[index].done, onChanged: (val) => _emp.toggle(index)),
