@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:thor/Thor/speech_controller.dart';
+import 'package:thor/puc_one/speech_controller.dart';
 import 'package:get/get.dart';
 
 

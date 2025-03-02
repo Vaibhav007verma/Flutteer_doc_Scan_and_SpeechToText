@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:thor/puc_one/emp_model.dart';
 
-import '../Thor/emp_model.dart';
 
 
 
