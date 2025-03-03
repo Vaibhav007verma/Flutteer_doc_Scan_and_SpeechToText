@@ -40,9 +40,9 @@ class DatabaseService{
   }
 
 
-  delete() async {
+  delete(String id) async {
     try{
-      await _fire.collection("users").doc("87xS0i1sUOMrjNVU977k").delete();
+      await _fire.collection("users").doc(id).delete(); // "87xS0i1sUOMrjNVU977k"
     } catch(e) {
       print("DELETE Error: ${e.toString()}");
     }
@@ -52,7 +52,7 @@ class DatabaseService{
 
   Future<List<Map<String,dynamic>>> showList() async {
     try{
-      final snapshot = await _fire.collection("useres").get();
+      final snapshot = await _fire.collection("users").get();
       return snapshot.docs.map((doc){
         return {
           "id": doc.id,
